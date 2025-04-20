@@ -11,6 +11,7 @@ from IDS import calculate_cos_dist
 from FID import calculate_fid
 from PSNR import calculate_images_PSNR 
 from ssim_lpips import compute_ssim, compute_lpips
+from psnr import evaluate_psnr
 import os
     
 #model_path_ids = 'resnet18_110.pth' 
@@ -40,7 +41,8 @@ if __name__ == "__main__":
         print("No ground truth dir provided, cannot calculate PSNR, IDS, or FID")
         exit()
     print("Calculating PSNR...")
-    thisPSNR = calculate_images_PSNR(dirGT,dirEI, imagesize)
+    #thisPSNR = calculate_images_PSNR(dirGT,dirEI, imagesize) 
+    thisPSNR = evaluate_psnr(dirGT,dirEI)
     print("c | " + str(thisPSNR))
     
     #print("Calculating IDS...") 
