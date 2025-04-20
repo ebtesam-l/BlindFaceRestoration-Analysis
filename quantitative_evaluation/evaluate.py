@@ -31,7 +31,7 @@ if __name__ == "__main__":
     dirGT = args.dirGT # '.DifFace/CelebA-Test2/hq' #   
     dirEI = args.dirEI # './DifFace/outputlq256/restored_faces' 
     imagesize = args.imagesize # 512 
-    '''
+    
     print("Calculating NIQE...") 
     thisNIQE = calculate_images_niqe(dirEI)
     print("NIQE | " + str(thisNIQE))
@@ -50,13 +50,13 @@ if __name__ == "__main__":
     print("Calculating FID...") 
     thisFID = calculate_fid(dirEI, dirGT)
     print("FID | " + str(thisFID))
-    '''
+    
     print("Calculating SSIM...") 
     thisSSIM = compute_ssim(dirGT, dirEI)
     print("SSIM | " + str(thisSSIM))
 
     print("Calculating LPIPS...") 
-    thisLPIPS = compute_ssim(dirGT, dirEI)
+    thisLPIPS = compute_lpips(dirGT, dirEI)
     print("LPIPS | " + str(thisLPIPS))
 
     '''
