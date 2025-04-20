@@ -1,7 +1,6 @@
 # BlindFaceRestoration-Analysis
 
-## 🧪 Evaluation Script Usage
-
+## Evaluation 
 To evaluate your face restoration results, use the following command:
 
 ```bash
